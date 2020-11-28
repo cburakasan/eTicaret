@@ -4,10 +4,8 @@ import lombok.Data;
 
 @Data
 public class UserResponseDto {
-    private String username;
-    private String password;
-    private String email;
-    private Integer gsm;
-    private String message;
+    private String hataMessage;
+    private Long id;
 
 }
+

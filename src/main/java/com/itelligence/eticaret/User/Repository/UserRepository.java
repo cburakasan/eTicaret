@@ -1,4 +1,4 @@
-package com.itelligence.eticaret.User.UserRepository;
+package com.itelligence.eticaret.User.Repository;
 
 
 import com.itelligence.eticaret.User.Model.User;
@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findByUsername(String userName);
+    User findByUsernameOrGsmOrEmail(String username, String gsm, String email);
+
 
 
 }

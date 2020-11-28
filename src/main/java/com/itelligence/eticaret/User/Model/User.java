@@ -25,7 +25,7 @@ public class User implements Serializable {
     private String email;
 
     @Column
-    private Long gsm;
+    private String gsm;
 
 
 
