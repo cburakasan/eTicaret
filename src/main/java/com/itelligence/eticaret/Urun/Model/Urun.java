@@ -1,4 +1,4 @@
-package com.itelligence.eticaret.Urun.Controller;
+package com.itelligence.eticaret.Urun.Model;
 
 import com.itelligence.eticaret.Urun.EnumModel.EnumModel;
 import lombok.Data;
