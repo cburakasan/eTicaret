@@ -1,4 +1,4 @@
-package com.itelligence.eticaret;
+package com.itelligence.eticaret.Urun.Exception;
 
 import lombok.Data;
 

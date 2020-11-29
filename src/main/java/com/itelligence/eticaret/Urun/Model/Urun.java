@@ -1,17 +1,18 @@
 package com.itelligence.eticaret.Urun.Model;
 
-import com.itelligence.eticaret.Urun.EnumModel.EnumModel;
+import com.itelligence.eticaret.Urun.EnumModel.EnumKategori;
 import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table
 @Data
 @ToString(exclude = {"id"})
-public class Urun {
+public class Urun implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -26,7 +27,7 @@ public class Urun {
     @Column
     private Date eklenmeTarihi;
     @Enumerated(EnumType.STRING)
-    private EnumModel kategori;
+    private EnumKategori kategori;
 
 
 

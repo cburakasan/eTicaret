@@ -19,9 +19,12 @@ public class UserController {
     public UserResponseDto userKayit(@RequestBody UserRequestDto userRequestDto) {
        return userSercive.userKayit(userRequestDto);
 
-
-
     }
+    @RequestMapping("/giris")
+    public UserResponseDto userGiris(@RequestBody UserRequestDto userRequestDto){
+        return userSercive.userGiris(userRequestDto);
+    }
+
 
 
 }

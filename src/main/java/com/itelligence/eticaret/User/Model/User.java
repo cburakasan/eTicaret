@@ -8,6 +8,7 @@ import java.io.Serializable;
 @Entity
 @Table
 @Data
+
 public class User implements Serializable {
 
     @Id
@@ -26,6 +27,7 @@ public class User implements Serializable {
 
     @Column
     private String gsm;
+
 
 
 

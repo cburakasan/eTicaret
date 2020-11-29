@@ -4,7 +4,7 @@ import com.itelligence.eticaret.User.Dto.UserRequestDto;
 import com.itelligence.eticaret.User.Dto.UserResponseDto;
 import com.itelligence.eticaret.User.Model.User;
 import com.itelligence.eticaret.User.Repository.UserRepository;
-import com.itelligence.eticaret.UserException;
+import com.itelligence.eticaret.Urun.Exception.UserException;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,5 +55,30 @@ public class UserSercive {
         }
 
         return userResponseDto;
+    }
+
+    public UserResponseDto userGiris(UserRequestDto userRequestDto) {
+        UserResponseDto userResponseDto = new UserResponseDto();
+        try {
+            String email = userRequestDto.getEmail();
+            String password = userRequestDto.getPassword();
+            User user = userRepository.findByEmailAndPassword(email, password);
+            if (user == null) {
+                throw new UserException("email veya password hatali", new Exception());
+            }
+            userResponseDto.setId(user.getId());
+            userResponseDto.setUsername(user.getUsername());
+            userResponseDto.setEmail(user.getEmail());
+            userResponseDto.setGsm(user.getGsm());
+        }catch (Exception exception){
+            String hataMesaji="email veya password hatali";
+            userResponseDto.setHataMessage(hataMesaji);
+            log.error(hataMesaji);
+            return userResponseDto;
+
+        }
+        log.info("giris basarili");
+        return userResponseDto;
+
     }
 }

@@ -5,12 +5,13 @@ import com.itelligence.eticaret.User.Model.User;
 import lombok.Data;
 import lombok.ToString;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table
 @Data
 @ToString(exclude = {"id"})
-public class UrunUser {
+public class UrunUser implements Serializable {
 
         @Id
         @GeneratedValue(strategy = GenerationType.SEQUENCE)
