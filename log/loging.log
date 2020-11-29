@@ -1,8 +1,8 @@
 16:18:34,921  INFO UserSercive:20 - User kayit servisine girildi
 16:18:35,199 ERROR UserSercive:48 - Girilen verilere ait kullanici bilgisi mevcuttur.
 UserException(message=Girilen verilere ait kullanici bilgisi mevcuttur.)
-	at com.itelligence.eticaret.User.Service.UserSercive.userKayit(UserSercive.java:30)
-	at com.itelligence.eticaret.User.Controller.UserController.userKayit(UserController.java:20)
+	at UserSercive.userKayit(UserSercive.java:30)
+	at UserController.userKayit(UserController.java:20)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
